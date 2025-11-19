@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="few.css">  
+</head>
+<body>
+    <h1 style="text-align: center;">LOGIN PAGE</h1>
+    <form action="text.html" method="post">
+        <input type="text" placeholder="username" name="name" id="name">
+        <input type="password" name="pad" id="pwd">
+        <input type="submit">
+    </form>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd").value;
+            if (name == "" || pwd == "") {
+                alert("Username and password must be filled out");
+                return false;
+            }
+            else if(pwd.length<6){
+                alert("Password must be at least 6 characters long");
+                document.myform.name.focus();
+                return false;
+            }
+        }   
+    </script>
+
+</body>
+</html>
